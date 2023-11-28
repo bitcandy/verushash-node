@@ -305,7 +305,7 @@ void verusHashV2b2(const v8::FunctionCallbackInfo<Value>& args) {
     args.GetReturnValue().Set(Nan::NewBuffer(result, 32).ToLocalChecked());
 }
 
-void Init(Handle<Object> exports) {
+void Init(v8::Local<v8::Object> exports) {
   NODE_SET_METHOD(exports, "init", verusInit);
 
   NODE_SET_METHOD(exports, "hash", verusHash);          //VerusHash V1
