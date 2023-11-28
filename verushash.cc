@@ -168,7 +168,7 @@ void verusHashV2b1(const v8::FunctionCallbackInfo<Value>& args) {
     }
     if(!node::Buffer::HasInstance(buffer)) {
         isolate->ThrowException(
-            Exception::TypeError(String::NewFromUtf8(isolate, "Invalid buffer objects.")).ToLocalChecked()
+            Exception::TypeError(String::NewFromUtf8(isolate, "Invalid buffer objects.").ToLocalChecked())
         );
         return;
     }
@@ -227,7 +227,7 @@ void verusHashV2b2(const v8::FunctionCallbackInfo<Value>& args) {
     }
     if(!node::Buffer::HasInstance(buffer)) {
         isolate->ThrowException(
-            Exception::TypeError(String::NewFromUtf8(isolate, "Invalid buffer objects.")).ToLocalChecked()
+            Exception::TypeError(String::NewFromUtf8(isolate, "Invalid buffer objects.").ToLocalChecked())
         );
         return;
     }
